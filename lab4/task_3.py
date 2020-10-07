@@ -191,7 +191,7 @@ def draw_icecream(col1, col2, col3, waffle_color, chiral, x, y):
         circle(screen, col2, (x + 35, y + 225), 10)
         circle(screen, col3, (x + 50, y + 220), 10)
     if chiral == 'left':
-        x0 = 1000
+        x0 = 125
         polygon(screen, waffle_color, [(x0 - (-x + 60), y + 250), (x0 - (-x + 60), y + 220), (x0 - (-x + 20), y + 235)])
         circle(screen, col1, (x0 - (-x + 30), y + 230), 10)
         circle(screen, col2, (x0 - (-x + 35), y + 225), 10)
@@ -213,15 +213,15 @@ def draw_balls(col1, col2, col3, thread_color, x, y):
 
 
 draw_sun(YELLOW, 0, 0)
-draw_men(SKIN_COLOR, BLUE, 'left', 1, 250, 100, 150)
-screen.blit(draw_woman(RED, SKIN_COLOR, 'right',250, 1, 80,  50), (200, 100))
-screen.blit(draw_woman(RED, SKIN_COLOR, 'left', 50, 0.5, 80,  50), (130, 250))
+draw_men(SKIN_COLOR, RED, 'left', 1, 250, 100, 150)
+screen.blit(draw_woman(DARK_RED, SKIN_COLOR, 'right',250, 1, 80,  50), (200, 100))
+screen.blit(draw_woman(BLACK, SKIN_COLOR, 'left', 50, 0.5, 80,  50), (130, 250))
 screen.blit(draw_woman(RED, SKIN_COLOR, 'left',250, 1, 80,  50), (400, 100))
-draw_men(SKIN_COLOR, BLUE, 'left', 1, 250, 650, 150)
+draw_men(SKIN_COLOR, GREEN, 'left', 1, 250, 650, 150)
 draw_men(SKIN_COLOR, BLUE, 'right', 0.5, 50, 1200, 600)
 
 draw_balls(RED, GREEN, SKIN_COLOR, GRAY, 390, 230)
-draw_icecream(RED, BLACK, SKIN_COLOR, BLUE, 'right', 710, 250)
+draw_icecream(RED, BLACK, SKIN_COLOR, BLUE, 'left', 710, 250)
 pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
